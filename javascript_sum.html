@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Sum</title>
+
+    <style>
+        body{
+            background-color:azure;
+        }
+        table{
+           /* background-color:gray; */
+           width:100%;
+           height:auto;
+           margin:auto;
+           border-collapse:none;
+        }
+        table tr td input{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        tbody th input{
+            background-color:black;
+            text-align: center;
+            font-weight: bold;
+            color:white;
+        }
+        thead th{
+            background-color:navy;
+            color:white;
+        }
+    </style>
+</head>
+<script> 
+    function MyLoad(){ 
+        const cols=document.getElementsByTagName("input");
+        for(let index=0;index<cols.length;index++){ 
+            cols[index].addEventListener('change',function(){
+                var first_number=cols[index].name;
+                Total(first_number);
+            });
+        }
+    }
+
+    function Total(first_number){ 
+        var base=document.getElementsByName(first_number);
+        var first_sum=0;
+        for(let index=0;index<base.length;index++){ 
+            var first_base=base[index].value;
+            first_sum = +first_sum + +first_base;
+        }
+        document.getElementById(first_number + "_total").value=first_sum;
+    }
+</script>
+<body onload="MyLoad()">
+    <h3>Tabulation Sheet Of Class X</h3>
+    <table border="1"> 
+        <thead> 
+            <tr>
+                <th>Student Name</th>
+                <th>Bangla</th>
+                <th>English</th>
+                <th>Math</th>
+                <th>Physicis</th>
+                <th>Chemistry</th>
+                <th>Bilogy</th>
+                <th>Total Marks</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr>
+                <td>Md Ifaz</td>
+                <td><input type="number" name="col1"class="ALG"></td>
+                <td><input type="number" name="col1"class="ALG"></td>
+                <td><input type="number" name="col1"class="ALG"></td>
+                <td><input type="number" name="col1"class="ALG"></td>
+                <td><input type="number" name="col1"class="ALG"></td>
+                <td><input type="number" name="col1"class="ALG"></td>
+                <th><input type="number" id="col1_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Jabed</td>
+                <td><input type="number" name="col2"class="ALG"></td>
+                <td><input type="number" name="col2"class="ALG"></td>
+                <td><input type="number" name="col2"class="ALG"></td>
+                <td><input type="number" name="col2"class="ALG"></td>
+                <td><input type="number" name="col2"class="ALG"></td>
+                <td><input type="number" name="col2"class="ALG"></td>
+                <th><input type="number" id="col2_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Rabby</td>
+                <td><input type="number" name="col3"class="ALG"></td>
+                <td><input type="number" name="col3"class="ALG"></td>
+                <td><input type="number" name="col3"class="ALG"></td>
+                <td><input type="number" name="col3"class="ALG"></td>
+                <td><input type="number" name="col3"class="ALG"></td>
+                <td><input type="number" name="col3"class="ALG"></td>
+                <th><input type="number" id="col3_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Asish</td>
+                <td><input type="number" name="col4"class="ALG"></td>
+                <td><input type="number" name="col4"class="ALG"></td>
+                <td><input type="number" name="col4"class="ALG"></td>
+                <td><input type="number" name="col4"class="ALG"></td>
+                <td><input type="number" name="col4"class="ALG"></td>
+                <td><input type="number" name="col4"class="ALG"></td>
+                <th><input type="number" id="col4_total" class="ALG"></th>
+            </tr>
+            <tr>
+                <td>Md Rana</td>
+                <td><input type="number" name="col5"class="ALG"></td>
+                <td><input type="number" name="col5"class="ALG"></td>
+                <td><input type="number" name="col5"class="ALG"></td>
+                <td><input type="number" name="col5"class="ALG"></td>
+                <td><input type="number" name="col5"class="ALG"></td>
+                <td><input type="number" name="col5"class="ALG"></td>
+                <th><input type="number" id="col5_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Koysar</td>
+                <td><input type="number" name="col6"class="ALG"></td>
+                <td><input type="number" name="col6"class="ALG"></td>
+                <td><input type="number" name="col6"class="ALG"></td>
+                <td><input type="number" name="col6"class="ALG"></td>
+                <td><input type="number" name="col6"class="ALG"></td>
+                <td><input type="number" name="col6"class="ALG"></td>
+                <th><input type="number" id="col6_total" class="ALG"></th>
+            </tr>
+            <tr>
+                <td>Md Majed</td>
+                <td><input type="number" name="col7"class="ALG"></td>
+                <td><input type="number" name="col7"class="ALG"></td>
+                <td><input type="number" name="col7"class="ALG"></td>
+                <td><input type="number" name="col7"class="ALG"></td>
+                <td><input type="number" name="col7"class="ALG"></td>
+                <td><input type="number" name="col7"class="ALG"></td>
+                <th><input type="number" id="col7_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Khaled</td>
+                <td><input type="number" name="col8"class="ALG"></td>
+                <td><input type="number" name="col8"class="ALG"></td>
+                <td><input type="number" name="col8"class="ALG"></td>
+                <td><input type="number" name="col8"class="ALG"></td>
+                <td><input type="number" name="col8"class="ALG"></td>
+                <td><input type="number" name="col8"class="ALG"></td>
+                <th><input type="number" id="col8_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Zakir</td>
+                <td><input type="number" name="col9"class="ALG"></td>
+                <td><input type="number" name="col9"class="ALG"></td>
+                <td><input type="number" name="col9"class="ALG"></td>
+                <td><input type="number" name="col9"class="ALG"></td>
+                <td><input type="number" name="col9"class="ALG"></td>
+                <td><input type="number" name="col9"class="ALG"></td>
+                <th><input type="number" id="col9_total" class="ALG"></th>
+            </tr>
+            <tr>
+                <td>Md Boplob</td>
+                <td><input type="number" name="col10"class="ALG"></td>
+                <td><input type="number" name="col10"class="ALG"></td>
+                <td><input type="number" name="col10"class="ALG"></td>
+                <td><input type="number" name="col10"class="ALG"></td>
+                <td><input type="number" name="col10"class="ALG"></td>
+                <td><input type="number" name="col10"class="ALG"></td>
+                <th><input type="number" id="col10_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Shahajan</td>
+                <td><input type="number" name="col11"class="ALG"></td>
+                <td><input type="number" name="col11"class="ALG"></td>
+                <td><input type="number" name="col11"class="ALG"></td>
+                <td><input type="number" name="col11"class="ALG"></td>
+                <td><input type="number" name="col11"class="ALG"></td>
+                <td><input type="number" name="col11"class="ALG"></td>
+                <th><input type="number" id="col11_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Korim</td>
+                <td><input type="number" name="col12"class="ALG"></td>
+                <td><input type="number" name="col12"class="ALG"></td>
+                <td><input type="number" name="col12"class="ALG"></td>
+                <td><input type="number" name="col12"class="ALG"></td>
+                <td><input type="number" name="col12"class="ALG"></td>
+                <td><input type="number" name="col12"class="ALG"></td>
+                <th><input type="number" id="col12_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Tipu</td>
+                <td><input type="number" name="col13"class="ALG"></td>
+                <td><input type="number" name="col13"class="ALG"></td>
+                <td><input type="number" name="col13"class="ALG"></td>
+                <td><input type="number" name="col13"class="ALG"></td>
+                <td><input type="number" name="col13"class="ALG"></td>
+                <td><input type="number" name="col13"class="ALG"></td>
+                <th><input type="number" id="col13_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Raju</td>
+                <td><input type="number" name="col14"class="ALG"></td>
+                <td><input type="number" name="col14"class="ALG"></td>
+                <td><input type="number" name="col14"class="ALG"></td>
+                <td><input type="number" name="col14"class="ALG"></td>
+                <td><input type="number" name="col14"class="ALG"></td>
+                <td><input type="number" name="col14"class="ALG"></td>
+                <th><input type="number" id="col14_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Imon</td>
+                <td><input type="number" name="col15"class="ALG"></td>
+                <td><input type="number" name="col15"class="ALG"></td>
+                <td><input type="number" name="col15"class="ALG"></td>
+                <td><input type="number" name="col15"class="ALG"></td>
+                <td><input type="number" name="col15"class="ALG"></td>
+                <td><input type="number" name="col15"class="ALG"></td>
+                <th><input type="number" id="col15_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Imran</td>
+                <td><input type="number" name="col16"class="ALG"></td>
+                <td><input type="number" name="col16"class="ALG"></td>
+                <td><input type="number" name="col16"class="ALG"></td>
+                <td><input type="number" name="col16"class="ALG"></td>
+                <td><input type="number" name="col16"class="ALG"></td>
+                <td><input type="number" name="col16"class="ALG"></td>
+                <th><input type="number" id="col16_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Piyal</td>
+                <td><input type="number" name="col17"class="ALG"></td>
+                <td><input type="number" name="col17"class="ALG"></td>
+                <td><input type="number" name="col17"class="ALG"></td>
+                <td><input type="number" name="col17"class="ALG"></td>
+                <td><input type="number" name="col17"class="ALG"></td>
+                <td><input type="number" name="col17"class="ALG"></td>
+                <th><input type="number" id="col17_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Sobuj</td>
+                <td><input type="number" name="col18"class="ALG"></td>
+                <td><input type="number" name="col18"class="ALG"></td>
+                <td><input type="number" name="col18"class="ALG"></td>
+                <td><input type="number" name="col18"class="ALG"></td>
+                <td><input type="number" name="col18"class="ALG"></td>
+                <td><input type="number" name="col18"class="ALG"></td>
+                <th><input type="number" id="col18_total" class="ALG" readonly></th>
+            </tr>
+            <tr>
+                <td>Md Sajid</td>
+                <td><input type="number" name="col19"class="ALG"></td>
+                <td><input type="number" name="col19"class="ALG"></td>
+                <td><input type="number" name="col19"class="ALG"></td>
+                <td><input type="number" name="col19"class="ALG"></td>
+                <td><input type="number" name="col19"class="ALG"></td>
+                <td><input type="number" name="col19"class="ALG"></td>
+                <th><input type="number" id="col19_total" class="ALG" readonly></th>
+            </tr>
+            
+            <tr>
+                <td>Md Jahangir</td>
+                <td><input type="number" name="col20"class="ALG"></td>
+                <td><input type="number" name="col20"class="ALG"></td>
+                <td><input type="number" name="col20"class="ALG"></td>
+                <td><input type="number" name="col20"class="ALG"></td>
+                <td><input type="number" name="col20"class="ALG"></td>
+                <td><input type="number" name="col20"class="ALG"></td>
+                <th><input type="number" id="col20_total" class="ALG" readonly></th>
+            </tr>
+            
+
+        </tbody>
+    </table>
+
+</body>
+</html>
